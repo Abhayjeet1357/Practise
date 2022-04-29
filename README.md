@@ -1,3 +1,3 @@
 # Practise
 
-https://abhayjeet1357.github.io/Practise/index.html
+https://abhayjeet1357.github.io/Practise/Index.html
