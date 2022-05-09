@@ -1,4 +1,3 @@
-
 <!--<!DOCTYPE html>-->
 <html style="color:white;font-size:xx-large;">
 <head>
@@ -57,6 +56,26 @@ if (myKey == 'w') {
   document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -50
   myCheckHit()
 }
+if (myKey == 'ArrowRight') {
+  
+  document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 50
+  myCheckHit()
+}
+if (myKey == 'ArrowLeft') {
+
+document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + -50
+myCheckHit()
+}
+if (myKey == 'ArrowDown') {
+
+document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 50
+myCheckHit()
+}
+if (myKey == 'ArrowUp') {
+
+document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + -50
+myCheckHit()
+}
 }">
 
 <h1 align=center>Final Game By Abhay</h1>
@@ -69,6 +88,8 @@ if (myKey == 'w') {
    let myClock
    let myInterval=0;
 
+
+   
    // global functions here
 function myHitOther(my1,my2){
    left1   = parseInt(document.getElementById(my1).style.left)
@@ -90,9 +111,9 @@ function myHitOther(my1,my2){
 
 function myCheckHit(){
    if ( myHitOther('myImg01','myImg03') ){
-       alert('You win! Go to the guide of my game and the try to beat it 💪')  
+       alert('You win! Go to my guide now to learn the basics and then try to beat it 💪')  
        document.getElementById('myImg01').style.left = '20px'
-       location = 'http://127.0.0.1:5500/Level%201%20to%202.html'  // go to your next level
+       location = 'https://abhayjeet1357.github.io/Game_Dev_22_Abhay/public/Guide%20to%20Final%20Game%20By%20Abhay.html'  // go to your next level
    }
    else if ( myHitOther('myImg01','myImg02') ){
     window.location.reload();
@@ -103,6 +124,19 @@ function myCheckHit(){
    else if ( myHitOther('myImg01','myImg05') ){
     window.location.reload();
    }
+   else if ( myHitOther('myImg01','myImg0A') ){
+    window.location.reload();
+   }
+   else if ( myHitOther('myImg01','myImg0B') ){
+    window.location.reload();
+   }
+   else if ( myHitOther('myImg01','myImg0C') ){
+    window.location.reload();
+   }
+   else if ( myHitOther('myImg01','myImg0D') ){
+    window.location.reload();
+   }
+
 
 
    // more if statements here like the above
@@ -114,11 +148,34 @@ function myCheckHit(){
 
 </script>
 
-<img id="myImg03" style="position:absolute;width:300px; height:300px; top: 400px; left:1300px;right:0px;"  src="https://i.pinimg.com/originals/cb/28/8b/cb288ba7247a677acc5000a10d3eb911.png">
-<img id="myImg01" style="position:absolute; width:300px; height:300px; top: 400px; left:100px;right:0px;"  src="https://saintlouis.kidsoutandabout.com/sites/default/files/styles/650_scaled/public/ninja%20warror.jpg?itok=bpa5YWw3">
-<img id="myImg02" style="position:absolute; width:350px; height:300px; top:800px; left:750px; right:0px" src="https://clipartspub.com/images/skull-clipart-death-5.png">
-<img id="myImg04" style="position:absolute;width:350px; height:300px; top:850px; left:0px; right:0px" src="https://clipartspub.com/images/skull-clipart-death-5.png">
-<img id="myImg05" style="position:absolute;width:350px; height:300px; top:300px; left:750px; right:0px" src="https://clipartspub.com/images/skull-clipart-death-5.png">
+<img id="myImg03" style="background-color:white ;position:absolute;width:200px; height:200px; top: 400px; left:1300px;right:0px;"  src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/flags-clipart-black-and-white-vector-format-4-original.png?raw=true">
+<img id="myImg01" style="position:absolute;width:150px; border:solid white; height:200px; top: 230px; left:70px;right:0px;"  src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/ninja-clipart-original.png?raw=true">
+<img id="myImg02" style="position:absolute; border:solid white; width:200px; height:150px; top:500px; left:650px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+<img id="myImg04" style="position:absolute; border:solid white;width:200px; height:150px; top:500px; left:100px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+<img id="myImg05" style="position:absolute; border:solid white;width:200px; height:150px; top:300px; left:500px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+
+<img id="myImg0A" style="position:absolute;width:1600px; height:30px; top:0px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0B" style="position:absolute;width:30px; height:730px; top:00px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0C" style="position:absolute;width:30px; height:730px; top:0px;  right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0D" style="position:absolute;width:1600px; height:30px; top:727px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
