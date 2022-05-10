@@ -1,0 +1,279 @@
+<html style=" color:white;font-size: xx-large;font-weight:900;" >
+<head>
+    
+    <title>Final Game Level 4 By Abhay </title>
+</head>
+<body id="myBody" onLoad="{
+  clearInterval(myClock)
+   let myTemp = '100px 0px'
+   myClock = setInterval(function(){
+       myGlobalX -= 5
+       myTemp =  myGlobalX + 'px 0px'
+       document.getElementById('myBody').style.backgroundPosition = myTemp
+   }, 10)
+     
+ 
+   clearInterval(myTimer02)
+   myTimer02 = setInterval(function(){
+      let my02x = Math.floor((Math.random() * -10) - 1) 
+      let my02y = Math.floor((Math.random() * 10) - 1) 
+      document.getElementById('myImg08').style.left = parseInt(document.getElementById('myImg08').style.left) + my02x + 'px'
+      document.getElementById('myImg08').style.top  = parseInt(document.getElementById('myImg08').style.top)  + my02y + 'px'
+      myCheckHit()     // checks for all collisions
+   }, 50)
+ 
+
+
+ clearInterval(myTimer10)
+ myTimer10 = setInterval(function(){
+    let my10x = Math.floor((Math.random() * 1) - 3) 
+    let my10y = Math.floor((Math.random() * 0) - 0) 
+    document.getElementById('myImg10').style.left = parseInt(document.getElementById('myImg10').style.left) + my10x + 'px'
+    document.getElementById('myImg10').style.top  = parseInt(document.getElementById('myImg10').style.top)  + my10y + 'px'
+    myCheckHit()     // checks for all collisions
+ }, 50)
+ clearInterval(myTimer11)
+ myTimer11 = setInterval(function(){
+    let my11x = Math.floor((Math.random() * 15) - 0) 
+    let my11y = Math.floor((Math.random() * 0) - 0) 
+    document.getElementById('myImg11').style.left = parseInt(document.getElementById('myImg11').style.left) + my11x + 'px'
+    document.getElementById('myImg11').style.top  = parseInt(document.getElementById('myImg11').style.top)  + my11y + 'px'
+    myCheckHit()     // checks for all collisions
+ }, 50)
+}"
+
+   style="background-repeat:repeat;background-attachment: fixed; background-size: 80%" background="https://i.redd.it/k381o8jomq311.gif">
+     
+  
+   
+    <script>
+       let rotation = 0;
+       function rotateImg1() {
+       rotation += 0;
+       if (rotation <= 270) {
+       rotation = 90;
+       }     
+       document.querySelector("#myImg01").style.transform = `rotate(${rotation}deg)`;
+       }   
+      
+       function rotateImg2() {
+       rotation += 0;
+       if (rotation <= 270) {
+       rotation = 0;
+       }
+       document.querySelector("#myImg01").style.transform = `rotate(${rotation}deg)`;
+       }   
+      
+       function rotateImg3() {
+       rotation += 0;
+       if (rotation <= 270) { 
+       rotation = 0;
+       }
+       document.querySelector("#myImg01").style.transform = `rotate(${rotation}deg)`;
+       }   
+      
+       function rotateImg4() {
+       rotation += 0;
+       if (rotation <= 270) { 
+       rotation = 270
+       }
+       document.querySelector("#myImg01").style.transform = `rotate(${rotation}deg)`;
+       }   
+      
+     </script>
+     
+  
+   
+   </body>
+   <h4 style="color:pink;visibility:hidden">Version 0.0.39</h4>
+       
+   <br>
+   
+   
+   <body 
+   
+   
+   onkeydown="{
+      let myKey01 = event.key
+      //  let myKey01 = String.toLowerCase(event.key)
+      document.getElementById('myDiv01').innerHTML = myKey01
+      if (myKey01 == 'd') {
+        // either uncomment
+        // clearInterval(myInterval)
+        // myInterval = setInterval(function(){
+        //    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 3
+        //    myCheckHit()
+        // } ,20)
+        // or do the following
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) + 50
+         myCheckHit()
+         rotateImg1()
+      }
+      // put your other keydowns here.
+   let myKey02 = event.key
+      //  let myKey02 = String.toLowerCase(event.key)
+      document.getElementById('myDiv01').innerHTML = myKey02
+      if (myKey02 == 'w') {
+        // either uncomment
+        // clearInterval(myInterval)
+        // myInterval = setInterval(function(){
+        //    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 3
+        //    myCheckHit()
+        // } ,20)
+        // or do the following
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) - 50
+           myCheckHit()
+           rotateImg2()
+   }
+    // put your other keydowns here.
+    
+    let myKey03 = event.key
+      //  let myKey03 = String.toLowerCase(event.key)
+      document.getElementById('myDiv01').innerHTML = myKey03
+      if (myKey01 == 's') {
+        // either uncomment
+        // clearInterval(myInterval)
+        // myInterval = setInterval(function(){
+        //    document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 3
+        //    myCheckHit()
+        // } ,20)
+        // or do the following
+         document.getElementById('myImg01').style.top = parseInt(document.getElementById('myImg01').style.top) + 50
+         myCheckHit()
+         rotateImg3()
+      }
+      // put your other keydowns here.
+    let myKey04 = event.key
+      //  let myKey04 = String.toLowerCase(event.key)
+      document.getElementById('myDiv01').innerHTML = myKey04
+      if (myKey01 == 'a') {
+        // either uncomment
+        // clearInterval(myInterval)
+        // myInterval = setInterval(function(){
+        //    document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 3
+        //    myCheckHit()
+        // } ,20)
+        // or do the following
+         document.getElementById('myImg01').style.left = parseInt(document.getElementById('myImg01').style.left) - 50
+         myCheckHit()
+         rotateImg4()
+      }
+      // put your other keydowns here.
+   }">
+   
+   
+   
+   <script>
+   
+      // global variables here
+      let myGlobalX = 0
+      let myClock
+      let myTimer02
+      let myTimer09
+      let myTimer10
+      let myTimer11
+      let myInterval=0;
+      let myHorizontalSpeed = 10
+      let myVeritcalSpeed  = 10
+   
+      // global functions here
+   function myHitOther(my1,my2){
+      left1   = parseInt(document.getElementById(my1).style.left)
+      right1  = left1 + parseInt(document.getElementById(my1).style.width)
+      top1    = parseInt(document.getElementById(my1).style.top)   
+      bottom1 = top1   + parseInt(document.getElementById(my1).style.height)
+      left2   = parseInt(document.getElementById(my2).style.left)
+      right2  = left2 + parseInt(document.getElementById(my2).style.width)
+      top2    = parseInt(document.getElementById(my2).style.top)   
+      bottom2 = top2   + parseInt(document.getElementById(my2).style.height)
+      if ((right1  >=  left2  ) &&      	   
+          (bottom1 >=  top2   ) &&
+          (left1   <=  right2 ) &&
+          (top1    <=  bottom2) ){
+          return true
+      }
+   }
+   
+   
+   function myCheckHit(){
+      if ( myHitOther('myImg01','myImg02') ){
+          alert('You win! You can go to the next level.')  
+          document.getElementById('myImg01').style.left = '1100px'
+          location = 'http://127.0.0.1:5500/Practise-main/Public/Final%20Game%20Level%203.html'  // go to your next level
+      }
+      else if ( myHitOther('myImg01','myImg0A') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg0B') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg0C') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg0D') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg03') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg04') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg05') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg06') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg07') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg08') ){
+       window.location.reload();
+      }
+   
+      else if ( myHitOther('myImg01','myImg10') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImg11') ){
+       window.location.reload();
+      }
+      else if ( myHitOther('myImg01','myImggg') ){
+       window.location.reload();
+      }
+     else if( parseInt(document.getElementById('myImg11').style.left) > window.innerWidth - document.getElementById('myImg11').width ){
+       document.getElementById('myImg11').style.left = '-50px'
+   }
+
+   
+      // more if statements here like the above
+   
+   
+   
+   }  // end of myCheckHit()
+   
+   
+   
+   </script>
+   
+   <img id="myImg01" style="position:absolute;width:150px;border: solid black; height:200px; top:50px; left:50px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/ninja-clipart-original.png?raw=true">
+   <img id="myImg02" style="position:absolute;width:250px;background-color: white ;height:200px; top:50px; left:1300px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/flags-clipart-black-and-white-vector-format-4-original.png?raw=true">
+   <img id="myImg03" style="position:absolute;width:250px;border: solid white; height:150px; top:300px; left:130px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg04" style="position:absolute;width:250px;border: solid white; height:150px; top:50px; left:600px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg05" style="position:absolute;width:250px;border: solid white; height:150px; top:300px; left:1100px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg06" style="position:absolute;width:250px;border: solid white; height:150px; top:300px; left:600px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg07" style="position:absolute;width:250px;border: solid white; height:150px; top:500px; left:1200px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImggg" style="position:absolute;width:250px;border: solid white; height:150px; top:500px; left:100px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   
+   
+   <img id="myImg0A" style="position:absolute;width:1600px; height:30px; top:0px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0B" style="position:absolute;width:30px; height:730px; top:00px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0C" style="position:absolute;width:30px; height:730px; top:0px;  left:1570px;right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   <img id="myImg0D" style="position:absolute;width:1600px; height:30px; top:727px; left:00px; right:0px" src="https://www.divinestoneworks.net/wp-content/uploads/2017/04/mystic-black-a.jpg">
+   
+   <img id="myImg08" style="position:absolute;width:250px;background-color: white ;height:200px; top:200px; left:1300px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg10" style="position:absolute;width:250px;background-color: white ;height:200px; top:270px; left:1200px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+   <img id="myImg11" style="position:absolute;width:250px;background-color: white ;height:200px; top:10px; left:-800px; right:0px" src="https://github.com/Abhayjeet1357/Game_Dev_22_Abhay/blob/main/public/Images/skull-clipart-simple-4-original.png?raw=true">
+  
+   
+   <h3><div id="myDiv01" style="color:pink"><b>..</b></div></h3>
